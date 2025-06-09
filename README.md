@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="License">
 </p> -->
 
-This project demonstrates a powerful strategy for building robust computer vision models in **data-stricken environments**. I've created a full-stack pipeline that tackles a common challenge: the lack of a large, labeled dataset.
+This project demonstrates a powerful strategy for building robust computer vision models in **data-stricken environments**. I've created a full-stack pipeline that tacklesto demonstrate a sample solution to a common challenge: the lack of a large, labeled dataset.
 
 The core of this project is the use of a **Variational Autoencoder (VAE)** to generate thousands of synthetic, high-quality hand images. This synthetic dataset is then used to train a lightweight classifier for a real-world task: **real-time finger counting from a live webcam feed**.
 
