@@ -22,7 +22,7 @@ This repository is a showcase of how to bootstrap a complex computer vision syst
 
 Many real-world machine learning projects fail due to a lack of labeled training data. This project directly confronts that issue with a hybrid learning approach.
 
-Here's the workflow I designed:
+Follow the workflow-
 
  <!-- It's recommended to create a simple flowchart image for this -->
 
