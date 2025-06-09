@@ -86,7 +86,7 @@ source venv/bin/activate
 Run the first script to collect a small set of "real" hand images using your webcam. The more variety in poses and lighting, the better!
 
 ```bash
-python 1_data_collector.py
+python data_collector.py
 ```
 *   Follow the on-screen instructions. Press `s` to save an image and `q` to quit.
 *   Your images will be saved in the `raw_data/` directory.
@@ -96,7 +96,7 @@ python 1_data_collector.py
 Train the Variational Autoencoder on your collected images. This will learn the "essence" of a hand.
 
 ```bash
-python 2_vae_trainer.py
+python vae_trainer.py
 ```
 *   This will generate a `models/vae.pth` file.
 
@@ -105,7 +105,7 @@ python 2_vae_trainer.py
 Use the trained VAE to generate a large synthetic dataset.
 
 ```bash
-python 3_generate_synthetic_data.py
+python generate_synthetic_data.py
 ```
 *   This populates the `synthetic_data/` directory with 5,000 new images.
 
@@ -114,7 +114,7 @@ python 3_generate_synthetic_data.py
 This is the key step where all our data gets processed and labeled. The script uses MediaPipe to determine the finger count for every image in `raw_data/` and `synthetic_data/`.
 
 ```bash
-python 4_label_data.py
+python label_data.py
 ```
 *   The script will create a fully labeled and organized dataset in `processed_data/`, split into `train` and `val` sets.
 
@@ -123,7 +123,7 @@ python 4_label_data.py
 Now, train the ResNet18 classifier on your rich, combined dataset.
 
 ```bash
-python 5_classifier_trainer.py
+python classifier_trainer.py
 ```
 *   This will generate the final `models/finger_classifier.pth` file.
 
@@ -132,7 +132,7 @@ python 5_classifier_trainer.py
 Execute the final script to see your model in action!
 
 ```bash
-python 6_real_time_demo.py
+python real_time_demo.py
 ```
 *   Point your webcam at your hand and watch the model classify the number of fingers in real-time. Press `q` to quit.
 
